@@ -70,7 +70,7 @@ graph = graph.subgraph(new ByLabel<>("person"), new ByLabel<>("knows"));
 
 Firstly, let's see how the original graph structure looks like, so comment out this line. 
 
-Go into the '/gradoop-tutorial' folder. Delete all previously compiled Java files and resources, and then compile, test & package a new Java project.
+Go into the `/gradoop-tutorial` folder. Delete all previously compiled Java files and resources, and then compile, test & package a new Java project.
 
 ```
 mvn clean install
@@ -82,8 +82,8 @@ Then execute this new Java program.
 mvn exec:java -Dexec.mainClass="org.gradoop.tutorial.operators.subgraph.SubgraphTutorial_1" -Dexec.cleanupDaemonThreads=false
 ```
 
-In '\gradoop-tutorial\gradoop_tutorial_output' you can see the first output called 01_subgraph_1.dot. Open it and paste the content of it on the Online GraphViz tool. Here you can see the original graph. In addition, before executing a new Java program you need to rename the first output file.
+In `\gradoop-tutorial\gradoop_tutorial_output` you can see the first output called 01_subgraph_1.dot. Open it and paste the content of it on the Online GraphViz tool. Here you can see the original graph. In addition, before executing a new Java program you need to rename the first output file.
 
 ### Use the subgraph operator
-Now, let the subgraph operator is on line 63 work and repeat the above process of 'mvn clean install' and 'mvn exec'. Then you will see the new output after using the subgraph operator. In this program, you create a subgraph that contains "person" vertices and "knows" edges only.
+Now, let the subgraph operator is on line 63 work and repeat the above process of `mvn clean install` and `mvn exec`. Then you will see the new output after using the subgraph operator. In this program, you create a subgraph that contains "person" vertices and "knows" edges only.
 
