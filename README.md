@@ -15,37 +15,37 @@ sudo apt install openjdk-8-jdk
 
 Check Java Version:
 
-'''
+```
 java -version
-'''
+```
 
 The output should be something like:
 
-'''
+```
 openjdk version "1.8.0_265"
-'''
+```
 
 ### Maven
 
 Installation of maven 3 (Unix). For Windows installation see [here](https://docs.wso2.com/display/IS323/Installing+Apache+Maven+on+Windows).
 
-'''
+```
 sudo apt install maven
-'''
+```
 
 Check maven version:
 
-'''
+```
 mvn -version 
-'''
+```
 
 Output should look like this:
 
-'''
+```
 Apache Maven 3.6.3
 Maven home: /usr/share/maven
 Java version: 1.8.0_265, vendor: Private Build, runtime: /usr/lib/jvm/java-8-openjdk-amd64/jre
-'''
+```
 
 ### Graphviz
 
@@ -57,30 +57,30 @@ There is the Online GraphViz tool [here](https://dreampuf.github.io/GraphvizOnli
 ### Clone the repository
 First clone the git [gradoop-tutorial](https://github.com/dbs-leipzig/gradoop-tutorial) repository.
 
-'''
+```
 git clone https://github.com/dbs-leipzig/gradoop-tutorial.git
-'''
+```
 
 ### See the original graph structure
-In this tutorial you need to edit the Java program in '/gradoop-tutorial/src/main/java/org/gradoop/tutorial/operators/subgraph/' called SubgraphTutorial_1.java. The use of the subgraph operator is on line 63. 
+In this tutorial you need to edit the Java program in `/gradoop-tutorial/src/main/java/org/gradoop/tutorial/operators/subgraph/` called SubgraphTutorial_1.java. The use of the subgraph operator is on line 63. 
 
-'''
+```
 graph = graph.subgraph(new ByLabel<>("person"), new ByLabel<>("knows"));
-'''
+```
 
 Firstly, let's see how the original graph structure looks like, so comment out this line. 
 
 Go into the '/gradoop-tutorial' folder. Delete all previously compiled Java files and resources, and then compile, test & package a new Java project.
 
-'''
+```
 mvn clean install
-'''
+```
 
 Then execute this new Java program.
 
-'''
+```
 mvn exec:java -Dexec.mainClass="org.gradoop.tutorial.operators.subgraph.SubgraphTutorial_1" -Dexec.cleanupDaemonThreads=false
-'''
+```
 
 In '\gradoop-tutorial\gradoop_tutorial_output' you can see the first output called 01_subgraph_1.dot. Open it and paste the content of it on the Online GraphViz tool. Here you can see the original graph. In addition, before executing a new Java program you need to rename the first output file.
 
