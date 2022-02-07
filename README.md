@@ -9,9 +9,9 @@ The following explains which software is required for the Gradoop tutorial.
 
 For the Gradoop-Tutorial java 8 is required. Install Java 8 (Unix). For Windows installation see [here](https://www.java.com/en/download/help/windows_manual_download.html).
  
-'''
+```
 sudo apt install openjdk-8-jdk
-'''
+```
 
 Check Java Version:
 
